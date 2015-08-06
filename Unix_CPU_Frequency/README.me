@@ -1,0 +1,16 @@
+Description:
+    Create dynamic CPU frequency graph by cpufrequtils
+
+    # /usr/share/cacti/site/scripts/unix_cpufreq.sh
+    freq:1000000
+
+Installation:
+    1. Put unix_cpufreq.sh in /usr/share/cacti/site/scripts/ (for Debian 8 Jessie)
+    2. Make sure it has appropriate permission. e.g.: chmod 755 /usr/share/cacti/site/scripts/
+    3. Create a graph based on the imported template - "Unix - CPU Frequency"    
+
+Test:
+    Tested with cacti-0.8.8b, rrdtool-1.4.8-1.2, cpufrequtils_008-1 on Debian 8 Jessie running on a Thinkpad T60 laptop
+
+Known Issues:
+    - The script calls cpu-freq-info -f which "Get frequency the CPU currently runs at"   

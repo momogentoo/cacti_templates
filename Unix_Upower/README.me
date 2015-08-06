@@ -1,0 +1,19 @@
+Description:
+    Create Battery capacity graph by upower
+
+    energy: current battery capacity Wh
+    energy-full: current max full battery capacity Wh
+    energy-full-design: Full design batter capacity Wh
+    energy-rate: energy rate at W
+
+    # /usr/share/cacti/site/scripts/unix_upower.sh /org/freedesktop/UPower/devices/battery_BAT0
+    energy:28.64 energy-empty:0 energy-full:28.64 energy-full-design:56.16 energy-rate:0
+
+Installation:
+    1. Put unix_upower.sh in /usr/share/cacti/site/scripts/ (for Debian 8 Jessie)
+    2. Make sure it has appropriate permission. e.g.: chmod 755 /usr/share/cacti/site/scripts/unix_upower.sh
+    3. Create a graph based on the imported template - "Unix - Upower"
+    4. Specify parameter the graph generation requires like - /org/freedesktop/UPower/devices/battery_BAT0
+
+Test:
+    Tested with cacti-0.8.8b, rrdtool-1.4.8-1.2, upower_0.99.1-3.2 on Debian 8 Jessie running on a Thinkpad T60 laptop

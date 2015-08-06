@@ -1,0 +1,42 @@
+Description:
+    Create CPU temperature graph by querying SNMP OID LM-SENSORS-MIB::lmTempSensorsValue (.1.3.6.1.4.1.2021.13.16.2.1.3.1)
+    
+    # snmpwalk -v 2c 127.0.0.1 -c public .1.3.6.1.4.1.2021.13.16.2.1
+	LM-SENSORS-MIB::lmTempSensorsIndex.1 = INTEGER: 1
+	LM-SENSORS-MIB::lmTempSensorsIndex.2 = INTEGER: 2
+	LM-SENSORS-MIB::lmTempSensorsIndex.4 = INTEGER: 4
+	LM-SENSORS-MIB::lmTempSensorsIndex.5 = INTEGER: 5
+	LM-SENSORS-MIB::lmTempSensorsIndex.6 = INTEGER: 6
+	LM-SENSORS-MIB::lmTempSensorsIndex.7 = INTEGER: 7
+	LM-SENSORS-MIB::lmTempSensorsIndex.8 = INTEGER: 8
+	LM-SENSORS-MIB::lmTempSensorsIndex.9 = INTEGER: 9
+	LM-SENSORS-MIB::lmTempSensorsIndex.10 = INTEGER: 10
+	LM-SENSORS-MIB::lmTempSensorsIndex.11 = INTEGER: 11
+	LM-SENSORS-MIB::lmTempSensorsIndex.12 = INTEGER: 12
+	LM-SENSORS-MIB::lmTempSensorsDevice.1 = STRING: temp1
+	LM-SENSORS-MIB::lmTempSensorsDevice.2 = STRING: temp2
+	LM-SENSORS-MIB::lmTempSensorsDevice.4 = STRING: temp3
+	LM-SENSORS-MIB::lmTempSensorsDevice.5 = STRING: temp4
+	LM-SENSORS-MIB::lmTempSensorsDevice.6 = STRING: temp5
+	LM-SENSORS-MIB::lmTempSensorsDevice.7 = STRING: temp7
+	LM-SENSORS-MIB::lmTempSensorsDevice.8 = STRING: temp9
+	LM-SENSORS-MIB::lmTempSensorsDevice.9 = STRING: temp10
+	LM-SENSORS-MIB::lmTempSensorsDevice.10 = STRING: temp11
+	LM-SENSORS-MIB::lmTempSensorsDevice.11 = STRING: Core 0
+	LM-SENSORS-MIB::lmTempSensorsDevice.12 = STRING: Core 1
+	LM-SENSORS-MIB::lmTempSensorsValue.1 = Gauge32: 55000
+	LM-SENSORS-MIB::lmTempSensorsValue.2 = Gauge32: 40000
+	LM-SENSORS-MIB::lmTempSensorsValue.4 = Gauge32: 37000
+	LM-SENSORS-MIB::lmTempSensorsValue.5 = Gauge32: 55000
+	LM-SENSORS-MIB::lmTempSensorsValue.6 = Gauge32: 50000
+	LM-SENSORS-MIB::lmTempSensorsValue.7 = Gauge32: 32000
+	LM-SENSORS-MIB::lmTempSensorsValue.8 = Gauge32: 39000
+	LM-SENSORS-MIB::lmTempSensorsValue.9 = Gauge32: 50000
+	LM-SENSORS-MIB::lmTempSensorsValue.10 = Gauge32: 52000
+	LM-SENSORS-MIB::lmTempSensorsValue.11 = Gauge32: 59000
+	LM-SENSORS-MIB::lmTempSensorsValue.12 = Gauge32: 59000
+
+
+    Reference: LM-SENSORS-MIB
+Test:
+    Tested with cacti-0.8.8b, rrdtool-1.4.8-1.2 on Debian 8 Jessie running on a Thinkpad T60 laptop
